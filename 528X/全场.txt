@@ -1,0 +1,86 @@
+moveY(75, 500);
+//run_for_take(20);
+uptask(200, 500);
+wait(500, timeUnits ::msec);
+uptask(-190,500);
+wait(500, timeUnits ::msec);
+Forput(160,400 );
+//延展
+
+
+ set_Motor(M_intake_1,145);
+ set_Motor(M_intake_2,-145);
+ ResetRotation();
+// run_for_take(65);
+ run(65);
+ //第一组
+
+ run_back(25);
+ wait(200, timeUnits ::msec);
+ robotDrive.turnFor(60,degrees);
+ ResetRotation();
+ run_back(70);
+ //wait(500, timeUnits ::msec);
+
+//完成后退至第二组
+
+  //set_Motor(M_intake_1,0);
+  //set_Motor(M_intake_2,0);
+  robotDrive.turnFor(-52,degrees);
+  ResetRotation();
+  //moveY(-110,400);//400
+  //wait(500, timeUnits::msec);
+//回正
+
+  set_Motor(M_intake_1,190);
+  set_Motor(M_intake_2,-190);
+  //run_for_take(80);
+  run(80);
+//第二组
+
+  //run_back(50);
+  robotDrive.turnFor(-150,degrees);
+  ResetRotation();
+ //向得分区进发
+  
+  set_Motor(M_intake_1,200);
+  set_Motor(M_intake_2,-200);
+  wait(400, timeUnits ::msec);
+  set_Motor(M_intake_1,30);
+  set_Motor(M_intake_2,-30);
+
+  //run_for_take(20);
+  moveY(180, 1000);
+ // wait(600, timeUnits ::msec);
+
+  //run_back(1.5);
+  wait(200, timeUnits ::msec);
+  set_Motor(M_intake_1,-136);
+  set_Motor(M_intake_2,136);//140
+  wait(595, timeUnits ::msec);
+  //呕吐
+    set_Motor(M_intake_1,40);
+    set_Motor(M_intake_2,-40);
+  //小吸一口
+
+  Forput(-110, 800);
+  wait(300, timeUnits ::msec);//立
+  
+  set_Motor(M_up, -40);
+  set_Motor(M_intake_1, 100);
+  set_Motor(M_intake_2,-100);
+  Forput(-180, 400);
+  wait(500, timeUnits ::msec);
+
+  
+  //Forput(-150, 300);
+  set_Motor(M_up, 0);
+  set_Motor(M_intake_1,  -100);
+  set_Motor(M_intake_2,   100);
+  //run_back(10);
+  //wait(600, timeUnits ::msec);
+  wait(500, timeUnits ::msec);
+  ResetRotation();
+  run_back(50);
+  //呕吐退出
+  
